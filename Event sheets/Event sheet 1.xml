@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Step" sid="612706751892828" static="0" type="number">1</variable>
+        <variable constant="0" name="oa" sid="386328051393959" static="0" type="text"></variable>
+        <variable constant="0" name="Author" sid="621235316828129" static="0" type="text"></variable>
+        <event-block sid="994485338407162">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="159853069130952" type="GenderField" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="733025626782658">
+                    <conditions>
+                        <condition id="4" name="Compare selected item text" sid="644778064988506" type="GenderField">
+                            <param id="0" name="Text to compare">&quot;Homem&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="913916976938250" type="System">
+                            <param id="0" name="Variable">oa</param>
+                            <param id="1" name="Value">&quot;o&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="207253852858897" type="System">
+                            <param id="0" name="Variable">Author</param>
+                            <param id="1" name="Value">&quot;Autor&quot;</param>
+                        </action>
+                        <action id="6" name="Set CSS style" sid="513762865086450" type="GenderField">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;#164b78&quot;</param>
+                        </action>
+                        <action id="6" name="Set CSS style" sid="942248251549597" type="GenderField">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#fff&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397935040600272">
+                    <conditions>
+                        <condition id="4" name="Compare selected item text" sid="758440967306419" type="GenderField">
+                            <param id="0" name="Text to compare">&quot;Mulher&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="963662333086635" type="System">
+                            <param id="0" name="Variable">oa</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="480461625798482" type="System">
+                            <param id="0" name="Variable">Author</param>
+                            <param id="1" name="Value">&quot;Autora&quot;</param>
+                        </action>
+                        <action id="6" name="Set CSS style" sid="938850290214025" type="GenderField">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;#f05f70&quot;</param>
+                        </action>
+                        <action id="6" name="Set CSS style" sid="466241806662323" type="GenderField">
+                            <param id="0" name="Property name">&quot;color&quot;</param>
+                            <param id="1" name="Value">&quot;#fff&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="967054528572738">
+            <conditions>
+                <condition id="1" name="On text changed" sid="763750675466108" type="ImgField" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="627452530171321">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="726555416276803" type="ImgField">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="956478033692331" type="cover_big">
+                            <param id="0" name="URI">&quot;https://a.wattpad.com/cover/&quot; &amp; ImgField.Text &amp;&quot;-500.jpg&quot;</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                        <action id="10" name="Load image from URL" sid="239072422451085" type="cover_small">
+                            <param id="0" name="URI">&quot;https://a.wattpad.com/cover/&quot; &amp; ImgField.Text &amp;&quot;-144.jpg&quot;</param>
+                            <param id="1" name="Size">0</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="837786400593597">
+            <conditions>
+                <condition id="1" name="On text changed" sid="784445097728959" type="UsernameField" />
+            </conditions>
+            <actions>
+                <action id="10" name="Load image from URL" sid="373121122234942" type="avatar">
+                    <param id="0" name="URI">&quot;https://a.wattpad.com/useravatar/&quot; &amp; UsernameField.Text &amp; &quot;.128.jpg&quot;</param>
+                    <param id="1" name="Size">0</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="501185013178913" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="10" name="Load image from URL" sid="226834573592334" type="avatar">
+                    <param id="0" name="URI">&quot;https://a.wattpad.com/useravatar/&quot; &amp; UsernameField.Text &amp; &quot;.128.jpg&quot;</param>
+                    <param id="1" name="Size">0</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556450885252832">
+            <conditions>
+                <condition id="0" name="On clicked" sid="805494028144546" type="Build" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="123688121028265" type="Text2">
+                    <param id="0" name="Text">&quot;Publicando...&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="982528504551337" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;title color=&apos;#fff&apos;&gt;&quot; &amp; TitleField.Text &amp; &quot; | 1ª Edição - Concurso Estrelas de Athena&quot; &amp; &quot;&lt;/title&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="732573556355540" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;meta name=&apos;pehtml&apos; content=&apos;true&apos;&gt;&lt;meta name=&apos;viewport&apos; content=&apos;width=device-width, user-scalable=no, initial-scale=1&apos;&gt;&lt;meta name=&apos;directory&apos; content=&apos;css, js, img, snd&apos;&gt;&lt;meta name=&apos;description&apos; content=&apos;Concurso Estrelas de Athena no Wattpad&apos;&gt;&lt;meta name=&apos;keywords&apos; content=&apos;concurso, wattpad, livros, books, open badges&apos;&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;a href=&apos;/&apos;&gt;&lt;logo&gt;Estrelas de Athena &lt;span class=&apos;badge&apos;&gt;1ª Edição&lt;/span&gt;&lt;/logo&gt;&lt;/a&gt;&lt;nav&gt;&lt;ul style=&apos;overflow:hidden!important&apos;&gt;&lt;a href=&apos;/Team&apos;&gt;&lt;li&gt;&lt;div&gt;&lt;i class=&apos;material-icons&apos;&gt;book&lt;/i&gt;&lt;/div&gt;&lt;p&gt;Equipe&lt;/p&gt;&lt;/li&gt;&lt;/a&gt;&lt;a href=&apos;/Rules&apos;&gt;&lt;li&gt;&lt;div&gt;&lt;i class=&apos;material-icons&apos;&gt;receipt&lt;/i&gt;&lt;/div&gt;&lt;p&gt;Regras&lt;/p&gt;&lt;/li&gt;&lt;/a&gt;&lt;a href=&apos;/Prizes&apos;&gt;&lt;li&gt;&lt;div&gt;&lt;i class=&apos;material-icons&apos;&gt;add_circle&lt;/i&gt;&lt;/div&gt;&lt;p&gt;Prêmios&lt;/p&gt;&lt;/li&gt;&lt;/a&gt;&lt;a href=&apos;/Editions&apos;&gt;&lt;li&gt;&lt;div&gt;&lt;i class=&apos;material-icons&apos;&gt;web&lt;/i&gt;&lt;/div&gt;&lt;p&gt;Edições&lt;/p&gt;&lt;/li&gt;&lt;/a&gt;&lt;a href=&apos;/Edition-1&apos;&gt;&lt;li&gt;&lt;div&gt;&lt;i class=&apos;material-icons&apos;&gt;web&lt;/i&gt;&lt;/div&gt;&lt;p&gt;1ª Edição&lt;/p&gt;&lt;/li&gt;&lt;/a&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/header&gt;&lt;div class=&apos;content&apos;&gt;&lt;article&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="672184723511503" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;a href=&apos;/&apos;&gt;&quot; &amp; &quot;Voltar à página de 1ª Edição &gt; &quot; &amp; GenreField.SelectedText &amp; &quot;&lt;/a&gt;&lt;h1&gt;&lt;i class=&apos;material-icons&apos;&gt;web&lt;/i&gt; 1ª Edição&lt;/h1&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="207587992678764" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;center&gt;&lt;img title=&apos;&quot; &amp; TitleField.Text &amp; &quot;&apos; src=&apos;https://a.wattpad.com/cover/&quot; &amp; ImgField.Text &amp; &quot;-500.jpg&apos;/&gt;&lt;/center&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="214426835344127" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;h2&gt;&lt;i class=&apos;material-icons&apos;&gt;book&lt;/i&gt; &quot; &amp; TitleField.Text &amp; &quot; (&quot; &amp; NameField.Text &amp; &quot;)&lt;/h2&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="717948827443559" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;h6&gt;Gênero: &quot; &amp; GenreField.SelectedText &amp; &quot;&lt;/h6&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="730296754599636" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;table border=&apos;1&apos; cellpadding=&apos;4&apos;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Capa&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Título da obra&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;&quot; &amp; Author &amp; &quot;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Username&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="282165593319298" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;a href=&apos;&quot; &amp; LinkField.Text &amp;&quot;&apos; target=&apos;blank&apos;&gt;Link&lt;/a&gt;&lt;/td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="975345421974822" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;td&gt;&lt;img title=&apos;&quot; &amp; TitleField.Text &amp; &quot;&apos; src=&apos;https://a.wattpad.com/cover/&quot; &amp; ImgField.Text &amp; &quot;-144.jpg&apos;/&gt;&lt;/td&gt;&lt;td&gt;&quot; &amp; TitleField.Text &amp; &quot;&lt;/td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="121883337444269" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;td&gt;&lt;center&gt;&lt;img title=&apos;&quot; &amp; NameField.Text &amp; &quot;&apos; src=&apos;https://a.wattpad.com/useravatar/&quot; &amp; UsernameField.Text &amp; &quot;.128.jpg&apos;/&gt;&lt;br/&gt;&quot; &amp; NameField.Text &amp; &quot;&lt;/a&gt;&lt;/td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="391530825948144" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;td&gt;&lt;a href=&apos;https://www.wattpad.com/user/&quot; &amp; UsernameField.Text &amp; &quot;&apos; target=&apos;blank&apos;&gt;@&quot; &amp; UsernameField.Text &amp; &quot;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;!-- DivTable.com --&gt;&lt;h3&gt;&lt;i class=&apos;material-icons&apos;&gt;timeline&lt;/i&gt; Trajetória&lt;/h3&gt;&lt;ul class=&apos;checked&apos;&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="988357503197593" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="604796808795537" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="355507199143509">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="209884360735048" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="505259938627754" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="214112986168431">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="877882758974048" type="System">
+                            <param id="0" name="First value">SubscriptiondatField.Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">SubscriptionapprovField.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="18" name="Append text" sid="957825597835552" type="HTML">
+                            <param id="0" name="Text">&quot;&lt;li&gt;Fase de inscrição (&lt;a href=&apos;&quot; &amp; SubscriptionlinkField.Text &amp; &quot;&apos; target=&apos;blank&apos;&gt;se inscreveu&lt;/a&gt; em &quot; &amp; SubscriptiondatField.Text &amp; &quot;, aprovad&quot; &amp; oa &amp; &quot; no mesmo dia).&lt;/li&gt;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="831037256764939" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="177569255073352" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="760498332971685">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="895479670143241" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="18" name="Append text" sid="558441265330506" type="HTML">
+                            <param id="0" name="Text">&quot;&lt;li&gt;Fase de inscrição (&lt;a href=&apos;&quot; &amp; SubscriptionlinkField.Text &amp; &quot;&apos; target=&apos;blank&apos;&gt;se inscreveu&lt;/a&gt; em &quot; &amp; SubscriptiondatField.Text &amp; &quot;, aprovad&quot; &amp; oa &amp; &quot; em &quot; &amp; SubscriptionapprovField.Text &amp; &quot;).&lt;/li&gt;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="809030199111653" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="255074564875515" type="System">
+                            <param id="0" name="Variable">Step</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="164932063663166">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="846563449474829" type="System">
+                    <param id="0" name="Variable">Step</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="781470821906957" type="System" />
+            </conditions>
+            <actions>
+                <action id="18" name="Append text" sid="248980113496274" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;h3&gt;&lt;i class=&apos;material-icons&apos;&gt;receipt&lt;/i&gt; Prêmios&lt;/h3&gt;&lt;table border=&apos;1&apos; cellpadding=&apos;4&apos;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Selo (Open Badge)&lt;/td&gt;&lt;td&gt;Fase&lt;/td&gt;&lt;td&gt;Texto&lt;/td&gt;&lt;td&gt;Estojo (onde guarda os selos)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&apos;../../Badges/participation.html&apos;&gt;&lt;img width=&apos;150px&apos; title=&apos;Open Badge de participação&apos; src=&apos;https://media.badgr.io/uploads/badges/issuer_badgeclass_a7f1472e-92dc-4c5c-b093-1e5958043dc1.png&apos;/&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inscrição&lt;/td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="890222934272523" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;td&gt;O Concurso Estrelas de Athena comprova que &lt;b&gt;&quot; &amp; NameField.Text &amp; &quot;&lt;/b&gt; ganhou a Open Badge de participação do concurso.&lt;/td&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="895028544307452" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;td&gt;&lt;a href=&apos;&apos; target=&apos;blank&apos;&gt;Link do Mozilla BackPack&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;!-- DivTable.com --&gt;&lt;/ul&gt;&lt;/hr&gt;&lt;a href=&apos;../&apos;&gt;Voltar à página da 1ª Edição&lt;/a&gt;&lt;/article&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="684893053618998" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;comments&gt;&lt;h1 id=&apos;comments&apos;&gt;&lt;i class=&apos;material-icons&apos;&gt;comment&lt;/i&gt; Comentários &lt;span class=&apos;badge&apos;&gt;&lt;a href=&apos;https://estrelasdeathena.github.io/Edition-1/misterio/&quot; &amp; UsernameField.Text &amp; &quot;.html#disqus_thread&apos;&gt;Loading...&lt;/a&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;&lt;div id=&apos;disqus_thread&apos;&gt;&lt;/div&gt;&lt;script&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="158983863685729" type="HTML">
+                    <param id="0" name="Text">&quot;/**&#x0D;&#x0A;*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.&#x0D;&#x0A;*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/&#x0D;&#x0A;/*&#x0D;&#x0A;var disqus_config = function () {&#x0D;&#x0A;this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&apos;s canonical URL variable&#x0D;&#x0A;this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&apos;s unique identifier variable&#x0D;&#x0A;};&#x0D;&#x0A;*/&#x0D;&#x0A;(function() { // DON&apos;T EDIT BELOW THIS LINE&#x0D;&#x0A;var d = document, s = d.createElement(&apos;script&apos;);&#x0D;&#x0A;s.src = &apos;https://concurso-estrelas-de-athena.disqus.com/embed.js&apos;;&#x0D;&#x0A;s.setAttribute(&apos;data-timestamp&apos;, +new Date());&#x0D;&#x0A;(d.head || d.body).appendChild(s);&#x0D;&#x0A;})();&lt;/script&gt;&quot;</param>
+                </action>
+                <action id="18" name="Append text" sid="995237096766916" type="HTML">
+                    <param id="0" name="Text">&quot;&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&apos;https://disqus.com/?ref_noscript&apos;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;&lt;/blockquote&gt;&lt;/comments&gt;&lt;/div&gt;&lt;script id=&apos;dsq-count-scr&apos; src=&apos;//concurso-estrelas-de-athena.disqus.com/count.js&apos; async&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="832077120448898" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="20" name="Show dialog" sid="688538607838649" type="Electron">
+                    <param id="0" name="Title">&quot;Selecione onde salvar a página&quot;</param>
+                    <param id="1" name="Default path">&quot;&quot;</param>
+                    <param id="2" name="Confirmation text (optional)">&quot;Salvar&quot;</param>
+                    <param id="3" name="Filters (TODO)">&quot;&quot;</param>
+                    <param id="4" name="Properties">&quot;openDirectory&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="247232231775155">
+            <conditions>
+                <condition id="8" name="On validate dialog" sid="655380577847577" type="Electron" />
+            </conditions>
+            <actions>
+                <action id="0" name="Write" sid="266155455438646" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.ChosenPath &amp; &quot;\&quot; &amp; UsernameField.Text &amp; &quot;.html&quot;</param>
+                    <param id="2" name="Data">HTML.Text</param>
+                    <param id="3" name="Encoding Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="700821139192499" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="129973327739571" type="Text2">
+                    <param id="0" name="Text">&quot;Publicada!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
